@@ -1,8 +1,8 @@
 {
   "workbench.colorCustomizations": {
-    "activityBar.background": "#4a0f50",
-    "titleBar.activeBackground": "#4a0f50",
-    "titleBar.inactiveBackground": "#4a0f50"
+    "activityBar.background": "#04413e",
+    "titleBar.activeBackground": "#04413e",
+    "titleBar.inactiveBackground": "#04413e"
   },
   "prettier.configPath": "./.prettierrc.js",
   "editor.detectIndentation": false,
