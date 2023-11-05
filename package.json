@@ -1,0 +1,38 @@
+{
+  "name": "visphere-email-processor",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "configure:husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\"",
+    "lint:check": "npx eslint ./src/**/*.cjs",
+    "lint:fix": "npx eslint ./src/**/*.cjs --fix",
+    "format": "npx prettier . --write"
+  },
+  "private": true,
+  "author": {
+    "name": "Visphere",
+    "email": "info@visphere.pl",
+    "url": "https://visphere.pl"
+  },
+  "lint-staged": {
+    "**/*.{js,cjs,json}": [
+      "yarn run lint:fix",
+      "yarn run format"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "prettier": "^3.0.3"
+  }
+}

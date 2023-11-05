@@ -1,0 +1,51 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#4a0f50",
+    "titleBar.activeBackground": "#4a0f50",
+    "titleBar.inactiveBackground": "#4a0f50"
+  },
+  "prettier.configPath": "./.prettierrc.js",
+  "editor.detectIndentation": false,
+  "editor.mouseWheelZoom": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "explorer.autoReveal": false,
+  "explorer.compactFolders": false,
+  "workbench.tree.indent": 20,
+  "workbench.iconTheme": "vsc-jetbrains-icons-enhanced",
+  "workbench.preferredDarkColorTheme": "One Dark Pro Monokai Darker",
+  "files.insertFinalNewline": true,
+  "psi-header.config": {
+    "forceToTop": true,
+    "blankLinesAfter": 1
+  },
+  "psi-header.changes-tracking": {
+    "isActive": true,
+    "autoHeader": "autoSave",
+    "include": ["javascript"],
+    "enforceHeader": true
+  },
+  "psi-header.lang-config": [
+    {
+      "language": "javascript",
+      "begin": "/*",
+      "lineLength": 64,
+      "beforeHeader": ["'use strict';"]
+    },
+    {
+      "language": "*",
+      "begin": "/*",
+      "lineLength": 64
+    }
+  ],
+  "psi-header.templates": [
+    {
+      "language": "*",
+      "template": [
+        "Copyright (c) <<year>> by Visphere & Vsph Technologies",
+        "Originally developed by Miłosz Gilga <https://miloszgilga.pl>"
+      ]
+    }
+  ]
+}
