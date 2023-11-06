@@ -23,7 +23,8 @@
   "psi-header.changes-tracking": {
     "isActive": true,
     "autoHeader": "autoSave",
-    "include": ["javascript"],
+    "include": ["javascript", "typescript"],
+    "includeGlob": ["**/*.sh"],
     "enforceHeader": true
   },
   "psi-header.lang-config": [
@@ -34,8 +35,18 @@
       "beforeHeader": ["'use strict';"]
     },
     {
+      "language": "shellscript",
+      "begin": "#",
+      "prefix": "# ",
+      "end": "#",
+      "beforeHeader": ["#!/bin/sh", ""],
+      "lineLength": 64
+    },
+    {
       "language": "*",
       "begin": "/*",
+      "prefix": " * ",
+      "end": " */",
       "lineLength": 64
     }
   ],
