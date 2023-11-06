@@ -15,14 +15,15 @@
     "url": "https://visphere.pl"
   },
   "lint-staged": {
-    "**/*.{js,cjs,json}": [
+    "**/*.{ts,js,cjs}": [
       "yarn run lint:fix",
       "yarn run format"
     ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run types:check"
     }
   },
   "devDependencies": {
