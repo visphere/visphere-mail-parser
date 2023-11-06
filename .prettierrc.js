@@ -4,4 +4,4 @@
  * Originally developed by Miłosz Gilga <https://miloszgilga.pl>
  */
 
-module.exports = require('../visphere-base/config/prettier/_prettier-base.config.cjs');
+module.exports = require('../visphere-base/config/prettier/_prettier-mail-parser.config.cjs');
