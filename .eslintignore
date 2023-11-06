@@ -4,3 +4,5 @@ LICENSE
 package.json
 yarn.lock
 .gitignore
+dist
+logs
