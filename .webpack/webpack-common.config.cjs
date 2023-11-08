@@ -11,15 +11,6 @@ const nodeExternals = require('webpack-node-externals');
 const NodemonPlugin = require('nodemon-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const envPath = path.join(
-  path.resolve(__dirname, '..', '..', 'visphere-base'),
-  '.env'
-);
-
-if (fs.existsSync(envPath)) {
-  dotenv.config({ path: envPath });
-}
-
 module.exports = ({ isProd, serverPort }) => ({
   entry: {
     index: path.resolve(__dirname, '..', 'src', 'server.ts'),
@@ -50,12 +41,6 @@ module.exports = ({ isProd, serverPort }) => ({
     new NodemonPlugin(),
     new DefinePlugin({
       'process.env.SERVER_PORT': JSON.stringify(serverPort),
-      'process.env.API_HEADER': JSON.stringify(
-        process.env.ENV_VSPH_MAIL_PARSER_API_HEADER
-      ),
-      'process.env.API_KEY': JSON.stringify(
-        process.env.ENV_VSPH_MAIL_PARSER_API_KEY
-      ),
     }),
   ],
 });
