@@ -29,11 +29,11 @@ class MailParserController {
       next(err);
       return;
     }
+    const hbsTemplate = req.body['hbsTemplate'] as string;
+    const messageUuid = req.body['messageUuid'] as string;
+    const sendToEmails = req.body['sendToEmails'] as string[];
     logger.info(
-      `End up processing email template. Template: ${parsedContent.replace(
-        /\n|\s|\r/g,
-        ''
-      )}`
+      `End up processing email template: ${hbsTemplate}. Message UUID: ${messageUuid}. Responders: ${sendToEmails}`
     );
     res.send(parsedContent);
   }
